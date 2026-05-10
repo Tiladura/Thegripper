@@ -94,6 +94,3 @@ Below is the current CAD design of the robot arm and gripper.
 | **Total** |  |  | **$22.04** |  |  |
 
 
-## Estimated Total Cost
-
-Total: 
