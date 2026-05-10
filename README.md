@@ -4,7 +4,7 @@ A personal robotic arm and gripper project focused on designing, building, and d
 
 ## Motivation
 
-I wanted to build a compact robotic arm that can sit on a desk, move through multiple joints, and grip small objects using a simple servo-powered mechanism. This project combines mechanical design, electronics, embedded programming, power wiring, and basic robotic motion control into one practical engineering build.
+I wanted to build a compact robotic arm that can sit on a desk, move through multiple joints, and grip small objects using a simple servo-powered mechanism. 
 
 The goal of roboarm-gripper is to create a small robotic manipulation platform that can be improved over time with smoother joint motion, better gripper control, inverse kinematics and more stable mechanical movement.
 
@@ -18,31 +18,6 @@ roboarm-gripper is designed as a compact desktop robotic arm platform that inclu
 - Arduino Uno control board
 
 
-## Main Features
-
-## Five-Servo Arm and Gripper System
-
-The robot uses five servos total: three MG996R servos and two SG90 servos.
-
-The MG996R servos are used for the main load-bearing arm joints, such as base rotation, shoulder movement, and elbow movement. These servos provide the main torque needed to move the arm structure.
-
-The SG90 servos are used for lighter mechanisms, such as wrist rotation, wrist tilt, or gripper opening and closing. These servos are smaller and better suited for low-load movement.
-
-## MG996R Main Joint System
-
-The three MG996R servos provide the main actuation for the robot arm.
-These servos are selected for the larger mechanical loads in the arm. They should be powered from a dedicated external 5 V to 6 V servo power rail, not directly from the Arduino Uno.
-
-## SG90 Gripper and Wrist System
-
-The two SG90 servos provide lighter movement for the end effector.
-
-Joint assignment:
-
-- SG90 Servo 1: wrist movement
-- SG90 Servo 2: gripper opening and closing
-
-The SG90 servos are used where lower torque is acceptable and where compact size is more important than strength.
 
 ## Arduino Uno Control System
 
@@ -50,6 +25,13 @@ The Arduino Uno is used as the main controller. It will generate the PWM control
 
 The Arduino Uno was chosen because it is simple, reliable, easy to program through USB, and well supported by the Arduino Servo library.
 
+## Powering
+
+The Arduino Uno and the servos will be powered separately.
+
+The **Arduino Uno** will be powered by a simple battery. This battery will be used only for the Arduino logic, control pins, and code execution.
+
+The **servos** will be powered by my own power bank. The power bank will supply 5V to the servo power wires.
 
 ## Full Robot CAD Design
 
@@ -91,7 +73,8 @@ Below is the current CAD design of the robot arm and gripper.
 ## Wiring
 
 <!-- Add wiring diagram image here -->
-<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/b37e1caf-453a-4d71-b5af-a0c8c1172837" />
+<img width="678" height="585" alt="image" src="https://github.com/user-attachments/assets/7b43d92e-f66d-4417-9182-486238dc514a" />
+
 
 <!--
 <img width="" height="" alt="wiring diagram" src="" />
@@ -102,7 +85,13 @@ Below is the current CAD design of the robot arm and gripper.
 
 
 ## BOM List
-
+| Part | Description | Qty | Total Cost (USD) | Distributor | Link |
+|---|---|---:|---:|---|---|
+| M2×22 Hex Socket Cap Screws | Black DIN 912 steel screws, grade 12.9, full thread. Pack of 10. | 1 pack | $2.93 | Ozon | [Link](https://ozon.kz/product/vint-din912-m2-h-22-mm-imbus-s-vnutrennim-shestigrannikom-i-tsilindricheskoy-golovkoy-stal-klassa-12-1766329524/?from_sku=1769491454&oos_search=false) |
+| 25T Aluminum Round Servo Horn | Silver round servo horn for 25T servos. Used to attach linkages to a servo shaft. | 3 | $6.28 | Ozon | [Link](https://ozon.kz/product/kruglyy-rychazhnyy-mehanizm-alyuminievyy-servoprivoda-25t-serebro-3044135484/) |
+| MG996R Servo Motor | High-torque servo motor for robotics, RC models, and mechanical projects. | 3 | $8.43 | Ozon | [Link](https://ozon.kz/product/servoprivod-mg995-mg996r-3248477282/) |
+| SG90 180° Micro Servo | Small 4.8–6V plastic-gear servo. Torque: 1.2–1.4 kg·cm. | 2 | $4.40 | Ozon | [Link](https://ozon.kz/product/servoprivod-sg90-180-grad-plastikovyy-reduktor-krutyashchiy-moment-1-2-kg-sm-4-8-v-1-4-kg-sm-6-0-3075849940/) |
+| **Total** |  |  | **$22.04** |  |  |
 
 
 ## Estimated Total Cost
