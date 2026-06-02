@@ -11,6 +11,7 @@ Used the built-in **Arrange** function in Fusion 360 to prepare the robot arm pa
 All parts were placed flat on the build plate and organized to fit within a **256 × 256 mm print area**. This layout helps reduce wasted space on the print bed and makes the parts easier to export for slicing.
 
 The arrangement was checked from multiple views to make sure the parts do not overlap and that each piece has enough spacing around it for printing. This makes the full set of parts more print-ready before moving into the slicer.
+And regarding the wiring, i think i will tie all the wires along the main structure, that way everything should stay organized. 
 
 ![arranged parts 1](https://stasis.hackclub-assets.com/images/1778326680287-hn7nmo.png)
 
