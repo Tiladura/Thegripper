@@ -35,7 +35,7 @@ I made several design updates to the arm and base assembly. I added some cutouts
 
 I strengthened the base section to make it more durable and less likely to break under stress. This should improve the reliability of the final assembly, especially around the areas that take more load. The whole project is not that big so i think it should not snap that easily, considering the fact that i will put high % of infill during printing. 
 
-I also made a few renders to visualize how the final version should look once everything is assembled. The renders helped me check the proportions, overall shape, and visual style of the design. I decided to make the gripper black and white so we can distinct specific parts from the render. Also it simply looks cooler imo.
+I also made a few renders to visualize how the final version should look once everything is assembled. The renders helped me check the proportions, overall shape, and visual style of the design. I decided to make the gripper black and white so we can have a distinction between specific parts from the render. Also it simply looks cooler imo.
 ![smthfuckoff_2026-May-09_06-57-23AM-000_CustomizedView19021997782_png](https://stasis.hackclub-assets.com/images/1778313346453-oldq3j.png)
 
 ![smthfuckoff_2026-May-09_07-18-53AM-000_CustomizedView18163791858_png](https://stasis.hackclub-assets.com/images/1778313346458-vp7qvj.png)
