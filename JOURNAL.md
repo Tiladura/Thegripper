@@ -33,15 +33,15 @@ I made several design updates to the arm and base assembly. I added some cutouts
 
 ![image](https://stasis.hackclub-assets.com/images/1778313524954-j9pki2.png)
 
-I strengthened the base section to make it more durable and less likely to break under stress. This should improve the reliability of the final assembly, especially around the areas that take more load.
+I strengthened the base section to make it more durable and less likely to break under stress. This should improve the reliability of the final assembly, especially around the areas that take more load. The whole project is not that big so i think it should not snap that easily, considering the fact that i will put high % of infill during printing. 
 
-I also made a few renders to visualize how the final version should look once everything is assembled. The renders helped me check the proportions, overall shape, and visual style of the design.
+I also made a few renders to visualize how the final version should look once everything is assembled. The renders helped me check the proportions, overall shape, and visual style of the design. I decided to make the gripper black and white so we can distinct specific parts from the render. Also it simply looks cooler imo.
 ![smthfuckoff_2026-May-09_06-57-23AM-000_CustomizedView19021997782_png](https://stasis.hackclub-assets.com/images/1778313346453-oldq3j.png)
 
 ![smthfuckoff_2026-May-09_07-18-53AM-000_CustomizedView18163791858_png](https://stasis.hackclub-assets.com/images/1778313346458-vp7qvj.png)
 
 ![smthfuckoff_2026-May-08_06-01-34PM-000_CustomizedView18295494155_png](https://stasis.hackclub-assets.com/images/1778313346234-7fv4sr.png)
-Finally, I added the logo of my favorite CS2 pro team because I thought it would make the project feel more personal and unique.
+Finally, I added the logo of my favorite CS2 pro team because I thought it would make the project feel more personal and unique. I added it using png to svg converter online. And simply extruded the logo inside the model.
 
 ![image](https://stasis.hackclub-assets.com/images/1778313404068-04vrzl.png)
 
@@ -66,7 +66,7 @@ Found the circular servo horns needed for the gripper mechanism and checked thei
 
 I made 2.8 mm holes in the printed part for the servo horn connection. These holes should give clearance for the screws while allowing the part to align with the horn mounting holes.
 
-I also counted the screws needed for the gripper assembly. The moving gripper parts will use M2 × 22 mm screws. This session helped finalize the screw requirements and correct the mounting-hole design for the servo horn attachment.
+I also counted the screws needed for the gripper assembly. The moving gripper parts will use M2 × 22 mm screws. This session helped finalize the screw requirements and correct the mounting-hole design for the servo horn attachment. I will order screws either from aliexpress or local supplier. 
 
 
 ![image](https://stasis.hackclub-assets.com/images/1778251229451-bq2s5i.png)
@@ -88,7 +88,7 @@ I tested several gear layouts before deciding on the current mechanism. During t
 ![image](https://stasis.hackclub-assets.com/images/1778144168805-1028f3.png)
 
 The solution I developed uses a fixed large gear that stays grounded while the servo is mounted on the moving part of the arm. Instead of the large gear rotating, the servo drives a smaller gear around it. This means the servo moves itself and the arm around the stationary gear. I like this approach because it keeps the base mechanically simple while still allowing the arm to rotate. It also makes the design more suitable for 3D printing, since the large gear can be fixed directly to the base structure.
- 
+ It will probably have small scope of rotation(the main base); however, it will be mounted on my desk so 360 degree rotation is not needed. I target for 0-90 degree range. I probably should have applied maths to calculate gear to degree ratio, but i think that will do :) 
 ![image](https://stasis.hackclub-assets.com/images/1778144204288-hko071.png)
 
 ![image](https://stasis.hackclub-assets.com/images/1778144313465-hebeqc.png)
@@ -112,7 +112,7 @@ _Time spent: 5h_
 Today I worked on the gripper mechanism and finished the first iteration of the last hand part. This session was mostly focused on getting the claw linkage and gear-driven motion to actually behave correctly in Fusion 360.
 
 The gripper was much harder than I expected. I am still not very confident in Fusion 360, so setting up the revolute joints, lining up the pivots, and making the linkage move without conflicts took a lot of trial and error. The hardest part was making the gears and connected arms move the claw in a controlled way instead of locking up, drifting out of alignment, or creating joint conflicts.
-
+I am planning to hold all gears in place using bolts which will hold them at the both ends, 25mm in length should be enough. I think i should have made a case that will hold all gears in place but for now i dont think thats necessary. Also i hope that gripper parts especially thin ones won't break upon testing. If i make high % of infill that should not be a problem i suppose. 
 I ended up remaking the gripper around 2–3 times because tuning the gears and linkage geometry became frustrating. Every small change affected something else: gear spacing, pivot placement, claw angle, arm length, or whether Fusion would even allow the joint to be created. I had to keep adjusting the layout until the mechanism finally started moving the way I wanted.
 ![image](https://stasis.hackclub-assets.com/images/1778084384798-t9gjxd.png)
 
@@ -128,6 +128,7 @@ _Time spent: 2.5h_
 I looked online for inspiration and design references. One important thing I learned is that putting too much force on a single servo hinge can damage or break the servo, so the mechanical structure needs to distribute the load properly.
 ![image](https://stasis.hackclub-assets.com/images/1777995490273-5as525.png)
 This image shows the first connection point of the arm, which will later support the rest of the mechanism. For the base joints, I will probably use stronger MG996R servos because they can handle more torque. For the smaller hand/gripper at the end, I plan to use lighter SG90 servos since they do not need to carry as much load.
+Also i decided to connect servos to the whole structure using circular horns, because i already used such design in my other project - Hexapod. I think these connections will be able to hold strong torque of the servos. I wanted to mount all the parts directly to the servo gears at first but i gladly realized that they will probably wear off really fast.
 
 ![image](https://stasis.hackclub-assets.com/images/1777995692392-7fouqk.png)
 
