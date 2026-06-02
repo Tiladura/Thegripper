@@ -19,9 +19,6 @@ And regarding the wiring, i think i will tie all the wires along the main struct
 
 ![arranged parts 3](https://stasis.hackclub-assets.com/images/1778327416402-6duyiq.png)
 
-![image](https://stasis.hackclub-assets.com/images/1778326680287-hn7nmo.png)
-![image](https://stasis.hackclub-assets.com/images/1778326688360-swsc6d.png)
-![image](https://stasis.hackclub-assets.com/images/1778327416402-6duyiq.png)
 
 # 5/9/2026 8 AM - Polished the design, fixed some flaws. Made 3d renders
 
@@ -51,19 +48,14 @@ Finally, I added the logo of my favorite CS2 pro team because I thought it would
 Overall looks:
 ![image](https://stasis.hackclub-assets.com/images/1778313360193-zjbccu.png)
 
-![image](https://stasis.hackclub-assets.com/images/1778313872630-qliadq.png)
-![image](https://stasis.hackclub-assets.com/images/1778313524954-j9pki2.png)
-![image](https://stasis.hackclub-assets.com/images/1778313346453-oldq3j.png)
-![image](https://stasis.hackclub-assets.com/images/1778313346458-vp7qvj.png)
-![image](https://stasis.hackclub-assets.com/images/1778313346234-7fv4sr.png)
-![image](https://stasis.hackclub-assets.com/images/1778313404068-04vrzl.png)
-![image](https://stasis.hackclub-assets.com/images/1778313360193-zjbccu.png)
+
 
 # 5/8/2026 2 PM - Counted required screws for the gripper and fixed the servo horn mounting holes
 
 _Time spent: 2h_
 
 Found the circular servo horns needed for the gripper mechanism and checked their mounting-hole specifications. The horns use M3 threaded mounting holes, so I modified the CAD model to match the servo horn layout.
+For some reason different sources show different dimensions for circular horn, i suppose thats because there are several versions of it? Regardless i found 3d model which is 1:1 of the one i can easily buy from my local supplier. And screws come in a package so thats nice as well.
 
 I made 2.8 mm holes in the printed part for the servo horn connection. These holes should give clearance for the screws while allowing the part to align with the horn mounting holes.
 
@@ -72,7 +64,7 @@ I also counted the screws needed for the gripper assembly. The moving gripper pa
 
 ![image](https://stasis.hackclub-assets.com/images/1778251229451-bq2s5i.png)
 
-![image](https://stasis.hackclub-assets.com/images/1778251229451-bq2s5i.png)
+
 
 # 5/7/2026 9 AM - Development of base structure and overall assembly
 
@@ -83,13 +75,16 @@ Today I completed the assembly of the first full version of my robotic arm. Seei
 
 A major part of my recent work has been focused on the rotating base. I spent a lot of time thinking about how to make the base rotate properly while still keeping the design practical for 3D printing. The base needs to be strong enough to support the arm, but it also has to move smoothly and be simple enough to manufacture. Because of this, I researched different gear mechanisms and looked for ways to transfer motion from the servo to the base rotation.
 
+From what i have researched i have not seen such solution to this problem (probably because it will not work), but for as far as im thinking it should be operational even with small margin of error.
+
 I tested several gear layouts before deciding on the current mechanism. During this process, I experimented with different gear sizes, positions, and clearances to see which arrangement would work best. The main challenge was finding a setup that could rotate the arm without making the base too complicated or difficult to print.
 
 
 ![image](https://stasis.hackclub-assets.com/images/1778144168805-1028f3.png)
 
 The solution I developed uses a fixed large gear that stays grounded while the servo is mounted on the moving part of the arm. Instead of the large gear rotating, the servo drives a smaller gear around it. This means the servo moves itself and the arm around the stationary gear. I like this approach because it keeps the base mechanically simple while still allowing the arm to rotate. It also makes the design more suitable for 3D printing, since the large gear can be fixed directly to the base structure.
- It will probably have small scope of rotation(the main base); however, it will be mounted on my desk so 360 degree rotation is not needed. I target for 0-90 degree range. I probably should have applied maths to calculate gear to degree ratio, but i think that will do :) 
+
+It will probably have small scope of rotation(the main base); however, it will be mounted on my desk so 360 degree rotation is not needed. I target for 0-90 degree range. I probably should have applied maths to calculate gear to degree ratio, but i think that will do :) 
 ![image](https://stasis.hackclub-assets.com/images/1778144204288-hko071.png)
 
 ![image](https://stasis.hackclub-assets.com/images/1778144313465-hebeqc.png)
@@ -100,11 +95,7 @@ Another part of the project that I am very satisfied with is the gripper. The gr
 
 ![image](https://stasis.hackclub-assets.com/images/1778144389367-9uytdg.png)
 
-![image](https://stasis.hackclub-assets.com/images/1778144058320-8tzsil.png)
-![image](https://stasis.hackclub-assets.com/images/1778144168805-1028f3.png)
-![image](https://stasis.hackclub-assets.com/images/1778144204288-hko071.png)
-![image](https://stasis.hackclub-assets.com/images/1778144313465-hebeqc.png)
-![image](https://stasis.hackclub-assets.com/images/1778144389367-9uytdg.png)
+
 
 # 5/6/2026 4 PM - Made the gripper, finished first iteration of last hand part
 
@@ -119,8 +110,7 @@ I ended up remaking the gripper around 2–3 times because tuning the gears and 
 
 ![image](https://stasis.hackclub-assets.com/images/1778084619578-odk86r.png)
 
-![image](https://stasis.hackclub-assets.com/images/1778084384798-t9gjxd.png)
-![image](https://stasis.hackclub-assets.com/images/1778084619578-odk86r.png)
+
 
 # 5/5/2026 3 PM - Started making first designs of the mechanism
 
@@ -131,7 +121,4 @@ I looked online for inspiration and design references. One important thing I lea
 This image shows the first connection point of the arm, which will later support the rest of the mechanism. For the base joints, I will probably use stronger MG996R servos because they can handle more torque. For the smaller hand/gripper at the end, I plan to use lighter SG90 servos since they do not need to carry as much load.
 Also i decided to connect servos to the whole structure using circular horns, because i already used such design in my other project - Hexapod. I think these connections will be able to hold strong torque of the servos. I wanted to mount all the parts directly to the servo gears at first but i gladly realized that they will probably wear off really fast.
 
-![image](https://stasis.hackclub-assets.com/images/1777995692392-7fouqk.png)
-
-![image](https://stasis.hackclub-assets.com/images/1777995490273-5as525.png)
 ![image](https://stasis.hackclub-assets.com/images/1777995692392-7fouqk.png)
