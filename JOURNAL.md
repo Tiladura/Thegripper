@@ -11,7 +11,9 @@ Used the built-in **Arrange** function in Fusion 360 to prepare the robot arm pa
 All parts were placed flat on the build plate and organized to fit within a **256 × 256 mm print area**. This layout helps reduce wasted space on the print bed and makes the parts easier to export for slicing.
 
 The arrangement was checked from multiple views to make sure the parts do not overlap and that each piece has enough spacing around it for printing. This makes the full set of parts more print-ready before moving into the slicer.
-And regarding the wiring, i think i will tie all the wires along the main structure, that way everything should stay organized. 
+And regarding the wiring, i think i will tie all the wires along the main structure, that way everything should stay organized. Single arduino UNO and one power supply should be enough for servos to work properly. I think i will use math and vectors to manipulate gripper movements, not the raw sevo inputs for every single movement.
+
+Furthermore, i think it will be possible to make some kind of AI training with an additional camera, or virtual environment to train the gripper to work by itself. Mainly i was thinking abt using it for assisting me with my project assemblies, and simply organize stuff on my desk, as of currently it is a mess and nothing else.
 
 ![arranged parts 1](https://stasis.hackclub-assets.com/images/1778326680287-hn7nmo.png)
 
@@ -52,7 +54,7 @@ Overall looks:
 
 # 5/8/2026 2 PM - Counted required screws for the gripper and fixed the servo horn mounting holes
 
-_Time spent: 2h_
+_Time spent: 1h_
 
 Found the circular servo horns needed for the gripper mechanism and checked their mounting-hole specifications. The horns use M3 threaded mounting holes, so I modified the CAD model to match the servo horn layout.
 For some reason different sources show different dimensions for circular horn, i suppose thats because there are several versions of it? Regardless i found 3d model which is 1:1 of the one i can easily buy from my local supplier. And screws come in a package so thats nice as well.
@@ -104,7 +106,9 @@ _Time spent: 5h_
 Today I worked on the gripper mechanism and finished the first iteration of the last hand part. This session was mostly focused on getting the claw linkage and gear-driven motion to actually behave correctly in Fusion 360.
 
 The gripper was much harder than I expected. I am still not very confident in Fusion 360, so setting up the revolute joints, lining up the pivots, and making the linkage move without conflicts took a lot of trial and error. The hardest part was making the gears and connected arms move the claw in a controlled way instead of locking up, drifting out of alignment, or creating joint conflicts.
-I am planning to hold all gears in place using bolts which will hold them at the both ends, 25mm in length should be enough. I think i should have made a case that will hold all gears in place but for now i dont think thats necessary. Also i hope that gripper parts especially thin ones won't break upon testing. If i make high % of infill that should not be a problem i suppose. 
+
+I am planning to hold all gears in place using bolts which will hold them at the both ends, 25mm in length should be enough. I think i should have made a case that will hold all gears in place but for now i dont think thats necessary. Also i hope that gripper parts especially thin ones won't break upon testing. If i make high % of infill that should not be a problem i suppose.
+
 I ended up remaking the gripper around 2–3 times because tuning the gears and linkage geometry became frustrating. Every small change affected something else: gear spacing, pivot placement, claw angle, arm length, or whether Fusion would even allow the joint to be created. I had to keep adjusting the layout until the mechanism finally started moving the way I wanted.
 ![image](https://stasis.hackclub-assets.com/images/1778084384798-t9gjxd.png)
 
@@ -119,6 +123,12 @@ _Time spent: 2.5h_
 I looked online for inspiration and design references. One important thing I learned is that putting too much force on a single servo hinge can damage or break the servo, so the mechanical structure needs to distribute the load properly.
 ![image](https://stasis.hackclub-assets.com/images/1777995490273-5as525.png)
 This image shows the first connection point of the arm, which will later support the rest of the mechanism. For the base joints, I will probably use stronger MG996R servos because they can handle more torque. For the smaller hand/gripper at the end, I plan to use lighter SG90 servos since they do not need to carry as much load.
-Also i decided to connect servos to the whole structure using circular horns, because i already used such design in my other project - Hexapod. I think these connections will be able to hold strong torque of the servos. I wanted to mount all the parts directly to the servo gears at first but i gladly realized that they will probably wear off really fast.
+Also i decided to connect servos to the whole structure using circular horns, because i already used such design in my other project - Hexapod. 
 
+I think these connections will be able to hold strong torque of the servos. I wanted to mount all the parts directly to the servo gears at first but i gladly realized that they will probably wear off really fast.
+
+Initially, i wanted to use sg90 servos for the whole gripper, however i realized that their torque will be too small to handle moderate loads.
+
+<img width="527" height="409" alt="image" src="https://github.com/user-attachments/assets/fe75d669-b702-47fc-a908-ed2290fbdff5" />
+Moreover, i considered using electric motors as they are more precise and with correct modules will be able to carry heavy objects, however, they are too expensive and i think for desk-use standart mg996r servo is the best choice for now.
 ![image](https://stasis.hackclub-assets.com/images/1777995692392-7fouqk.png)
