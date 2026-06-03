@@ -131,4 +131,5 @@ Initially, i wanted to use sg90 servos for the whole gripper, however i realized
 
 <img width="527" height="409" alt="image" src="https://github.com/user-attachments/assets/fe75d669-b702-47fc-a908-ed2290fbdff5" />
 Moreover, i considered using electric motors as they are more precise and with correct modules will be able to carry heavy objects, however, they are too expensive and i think for desk-use standart mg996r servo is the best choice for now.
+
 ![image](https://stasis.hackclub-assets.com/images/1777995692392-7fouqk.png)
